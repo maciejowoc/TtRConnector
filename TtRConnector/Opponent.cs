@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TtRConnector
 {
+    delegate void OppoMove();
     internal class Opponent : Game
     {
         readonly int id;
@@ -19,6 +20,8 @@ namespace TtRConnector
 
         //readonly List<Vertex> vertList;
         readonly Graph oppoMap;
+
+        
 
         public Opponent(int _id, ref Graph _graph)
         {
@@ -102,7 +105,7 @@ namespace TtRConnector
                     {
                         endgame = true;
                     }
-                    DisableButton(idx, nextidx);
+                    DisableButton(idx, nextidx,2);
                     break;
                 }
             }

@@ -116,12 +116,6 @@ namespace TtRConnector
             return tab;
         }
 
-        //_______________________________________________________________________
-        //                                  TO DO
-        //_______________________________________________________________________
-        //
-        //          Zmienić strukturę wyszukiwania (zastosować foreach)
-
         static Data[] Dijkstra(int[,] matrix, int start, int owner, List<Vertex> vertices)                   //Realizacja algorytmu Dijkstry
         {
             Data[] tab = new Data[matrix.GetLength(0)];
@@ -134,7 +128,6 @@ namespace TtRConnector
 
 
             Vertex v = vertices[start];
-            //foreach(Vertex v in vertices)
             do
             {
                 tab[v.id].visited = true;
@@ -241,7 +234,6 @@ namespace TtRConnector
                 table = Dijkstra(neighbours, start, owner, Vertices);
             }
             WypiszDane(meta, table);
-            //cities.Reverse();
             return cities;
         }
 
@@ -281,8 +273,18 @@ namespace TtRConnector
                 table = Dijkstra(neighbours, start, owner, Vertices);
             }
             WypiszDane(meta, table);
-            //cities.Reverse();
             return cities;
+        }
+
+        public void Clear()
+        {
+            for(int city = 0; city < Vertices.Count; city++)
+            {
+                for(int j = 0; j < Vertices[city].owner.Count; j++)
+                {
+                    Vertices[city].owner[j] = 0;
+                }
+            }
         }
 
     }
