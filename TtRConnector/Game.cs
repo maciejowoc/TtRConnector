@@ -260,12 +260,16 @@ namespace TtRConnector
             if(opponent == null)
             {
                 opponent = new Opponent(2, ref map);
+                Lbl_EnemyCarts.Text = Convert.ToString(opponent.opponentCarts);
+                Lbl_EnemyScore.Text = Convert.ToString(opponent.opponentScore);
             }
             else
             {
-                opponent.score = 0;
-                opponent.carts = 45;
+                opponent.opponentScore = 0;
+                opponent.opponentCarts = 45;
                 opponent.DrawTicket();
+                Lbl_EnemyCarts.Text = Convert.ToString(opponent.opponentCarts);
+                Lbl_EnemyScore.Text = Convert.ToString(opponent.opponentScore);
             }
             Dgv_TicketList.Visible = true;
             TLP_LabelGroup.Visible = true;

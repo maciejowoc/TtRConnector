@@ -9,10 +9,10 @@ namespace TtRConnector
     internal class Opponent : Game
     {
         readonly int id;
-        int opponentScore;
+        public int opponentScore;
         public int start;
         public int end;
-        int opponentCarts;
+        public int opponentCarts;
         int idx;
         int nextidx;
         bool endgame = false;
