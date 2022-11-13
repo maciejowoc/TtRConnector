@@ -125,7 +125,7 @@ namespace TtRConnector
 
         /* Method that claims connection */
 
-        void ClaimConnection(int x, int y, int owner)
+        public void ClaimConnection(int x, int y, int owner)
         {
             int cost = map.Vertices[x].distances[map.Vertices[x].connections.IndexOf(y)];
             if (carts >= cost)
@@ -135,7 +135,8 @@ namespace TtRConnector
                 carts -= cost;
                 Lbl_RemainingCarts.Text = Convert.ToString(carts);
                 DisableButton(x, y, owner);
-                switch (cost){
+                switch (cost)
+                {
                     case 1:
                         score++;
                         break;
@@ -154,23 +155,23 @@ namespace TtRConnector
                     case 6:
                         score += 15;
                         break;
-
                 }
+                
                 Lbl_Score.Text = Convert.ToString(score);
                 CheckRealisation(start,meta,owner);
                 if (carts < 4)
                 {
                     EndGame();
                 }
-                if (activeGame)
+                if (owner == 1 && activeGame)
                 {
                     var moveResults = opponent.MakeMove();
                     Lbl_EnemyCarts.Text = Convert.ToString(moveResults.Item2);
                     Lbl_EnemyScore.Text = Convert.ToString(moveResults.Item1);
                     Lbl_OpponentHeader.Text = Convert.ToString(map.Vertices[opponent.start].name);
                     Lbl_EnemyScoreHeader.Text = Convert.ToString(map.Vertices[opponent.end].name);
-                    DisableButton(moveResults.Item3, moveResults.Item4,2);
-                    if(moveResults.Item5 == true) EndGame();
+                    DisableButton(moveResults.Item3, moveResults.Item4, 2);
+                    if (moveResults.Item5 == true) EndGame();
                 }
             }
             else MessageBox.Show("Nie masz wystarczającej liczby wagonów!","Nie stać Cię!");         

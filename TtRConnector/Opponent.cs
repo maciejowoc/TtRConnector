@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TtRConnector
 {
-    delegate void OppoMove();
+    delegate void OppoMove(int x, int y, int owner);
     internal class Opponent : Game
     {
         readonly int id;
@@ -35,7 +35,7 @@ namespace TtRConnector
 
         public Opponent()
         {
-
+            
         }
 
         public void DrawTicket()
@@ -55,6 +55,7 @@ namespace TtRConnector
         }
 
         List<string> cities = new();
+
         public (int,int,int,int,bool) MakeMove()
         {
             oppoMap.Droga(start, end, id);
@@ -104,6 +105,7 @@ namespace TtRConnector
                     if (opponentCarts < 6)
                     {
                         endgame = true;
+                        oppoMap.Clear();
                     }
                     DisableButton(idx, nextidx,2);
                     break;
@@ -111,6 +113,7 @@ namespace TtRConnector
             }
             return (opponentScore, opponentCarts, idx, nextidx, endgame);
         }
+
 
         void CheckRealisation(int start, int meta, int owner)
         {
