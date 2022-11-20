@@ -14,6 +14,7 @@ namespace TtRConnector
         public int start;
         public int end;
         public int opponentCarts;
+        int tempScore;
         int idx;
         int nextidx;
         bool endgame = false;
@@ -49,6 +50,8 @@ namespace TtRConnector
                 if (!oppoMap.Vertices[start].CheckConnection(end) && start != end)
                 {
                     condition = true;
+                    oppoMap.Droga(start, end, 0);
+                    tempScore = oppoMap.len;
                 }
             }
             CheckRealisation(start, end, id);
@@ -120,6 +123,7 @@ namespace TtRConnector
             oppoMap.Droga(meta, start, owner);
             if (oppoMap.IsConnected(start, meta, owner))
             {
+                opponentScore += tempScore;
                 DrawTicket();
             }
         }
