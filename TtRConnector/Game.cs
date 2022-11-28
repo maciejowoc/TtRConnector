@@ -116,7 +116,18 @@ namespace TtRConnector
 
         protected void EndGame()
         {
-            MessageBox.Show("Twój wynik: " + Lbl_Score.Text, "Koniec gry!");
+            if(score > opponent.opponentScore)
+            {
+                MessageBox.Show("Zwycięstwo!\n\nTwój wynik: " + Lbl_Score.Text, "Koniec gry!");
+            }
+            else if(score < opponent.opponentScore)
+            {
+                MessageBox.Show("Porażka!\n\nTwój wynik: " + Lbl_Score.Text, "Koniec gry!");
+            }
+            else
+            {
+                MessageBox.Show("Remis!\n\nTwój wynik: " + Lbl_Score.Text, "Koniec gry!");
+            }
             activeGame = false;
             SetButtons(false);
             Btn_DrawTicket.Enabled = false;
@@ -168,8 +179,8 @@ namespace TtRConnector
                     var moveResults = opponent.MakeMove();
                     Lbl_EnemyCarts.Text = Convert.ToString(moveResults.Item2);
                     Lbl_EnemyScore.Text = Convert.ToString(moveResults.Item1);
-                    Lbl_OpponentHeader.Text = Convert.ToString(map.Vertices[opponent.start].name);
-                    Lbl_EnemyScoreHeader.Text = Convert.ToString(map.Vertices[opponent.end].name);
+                    //Lbl_OpponentHeader.Text = Convert.ToString(map.Vertices[opponent.start].name);
+                    //Lbl_EnemyScoreHeader.Text = Convert.ToString(map.Vertices[opponent.end].name);
                     DisableButton(moveResults.Item3, moveResults.Item4, 2);
                     if (moveResults.Item5 == true) EndGame();
                 }
