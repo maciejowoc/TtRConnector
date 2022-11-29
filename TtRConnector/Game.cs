@@ -276,7 +276,6 @@ namespace TtRConnector
             if(!activeGame) InsertMethods();
             activeGame = true;
             SetButtons(true);
-            //_______________________________DO SPRAWDZENIA___________________-
             if(opponent == null)
             {
                 opponent = new Opponent(2, ref map);
@@ -296,6 +295,18 @@ namespace TtRConnector
             Lbl_RemainingCarts.Text = Convert.ToString(carts);
             Lbl_Score.Text = Convert.ToString(score);
             SetTable();
+            Random r = new Random();
+            int beginer = 0;
+            beginer = r.Next(0, 9);
+            if (beginer > 5)
+            {
+                var moveResults = opponent.MakeMove();
+                Lbl_EnemyCarts.Text = Convert.ToString(moveResults.Item2);
+                Lbl_EnemyScore.Text = Convert.ToString(moveResults.Item1);
+                Lbl_OpponentHeader.Text = Convert.ToString(beginer);
+                DisableButton(moveResults.Item3, moveResults.Item4, 2);
+                if (moveResults.Item5 == true) EndGame();
+            }
             DrawTicket(1);
             Btn_DrawTicket.Enabled = true;
         }
