@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Btn_ReturnToMenu = new System.Windows.Forms.Button();
             this.Btn_NewGame = new System.Windows.Forms.Button();
             this.Btn_01 = new System.Windows.Forms.Button();
@@ -128,9 +130,10 @@
             // 
             // Btn_ReturnToMenu
             // 
-            this.Btn_ReturnToMenu.Location = new System.Drawing.Point(1380, 668);
+            this.Btn_ReturnToMenu.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn_ReturnToMenu.Location = new System.Drawing.Point(1261, 679);
             this.Btn_ReturnToMenu.Name = "Btn_ReturnToMenu";
-            this.Btn_ReturnToMenu.Size = new System.Drawing.Size(146, 59);
+            this.Btn_ReturnToMenu.Size = new System.Drawing.Size(328, 59);
             this.Btn_ReturnToMenu.TabIndex = 0;
             this.Btn_ReturnToMenu.Text = "Powrót do menu";
             this.Btn_ReturnToMenu.UseVisualStyleBackColor = true;
@@ -138,9 +141,10 @@
             // 
             // Btn_NewGame
             // 
+            this.Btn_NewGame.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Btn_NewGame.Location = new System.Drawing.Point(1256, 38);
             this.Btn_NewGame.Name = "Btn_NewGame";
-            this.Btn_NewGame.Size = new System.Drawing.Size(129, 57);
+            this.Btn_NewGame.Size = new System.Drawing.Size(333, 71);
             this.Btn_NewGame.TabIndex = 1;
             this.Btn_NewGame.Text = "Nowa Gra";
             this.Btn_NewGame.UseVisualStyleBackColor = true;
@@ -150,7 +154,7 @@
             // 
             this.Btn_01.Location = new System.Drawing.Point(1153, 145);
             this.Btn_01.Name = "Btn_01";
-            this.Btn_01.Size = new System.Drawing.Size(35, 74);
+            this.Btn_01.Size = new System.Drawing.Size(35, 29);
             this.Btn_01.TabIndex = 4;
             this.Btn_01.UseVisualStyleBackColor = true;
             // 
@@ -166,7 +170,7 @@
             // 
             this.Btn_03.Location = new System.Drawing.Point(1116, 249);
             this.Btn_03.Name = "Btn_03";
-            this.Btn_03.Size = new System.Drawing.Size(31, 69);
+            this.Btn_03.Size = new System.Drawing.Size(31, 29);
             this.Btn_03.TabIndex = 6;
             this.Btn_03.UseVisualStyleBackColor = true;
             // 
@@ -174,7 +178,7 @@
             // 
             this.Btn_04.Location = new System.Drawing.Point(1077, 100);
             this.Btn_04.Name = "Btn_04";
-            this.Btn_04.Size = new System.Drawing.Size(34, 99);
+            this.Btn_04.Size = new System.Drawing.Size(34, 29);
             this.Btn_04.TabIndex = 7;
             this.Btn_04.UseVisualStyleBackColor = true;
             // 
@@ -182,7 +186,7 @@
             // 
             this.Btn_14.Location = new System.Drawing.Point(1127, 66);
             this.Btn_14.Name = "Btn_14";
-            this.Btn_14.Size = new System.Drawing.Size(50, 43);
+            this.Btn_14.Size = new System.Drawing.Size(50, 29);
             this.Btn_14.TabIndex = 8;
             this.Btn_14.UseVisualStyleBackColor = true;
             // 
@@ -198,7 +202,7 @@
             // 
             this.Btn_25.Location = new System.Drawing.Point(1010, 328);
             this.Btn_25.Name = "Btn_25";
-            this.Btn_25.Size = new System.Drawing.Size(37, 57);
+            this.Btn_25.Size = new System.Drawing.Size(37, 29);
             this.Btn_25.TabIndex = 10;
             this.Btn_25.UseVisualStyleBackColor = true;
             // 
@@ -206,7 +210,7 @@
             // 
             this.Btn_26.Location = new System.Drawing.Point(996, 179);
             this.Btn_26.Name = "Btn_26";
-            this.Btn_26.Size = new System.Drawing.Size(40, 60);
+            this.Btn_26.Size = new System.Drawing.Size(40, 29);
             this.Btn_26.TabIndex = 11;
             this.Btn_26.UseVisualStyleBackColor = true;
             // 
@@ -278,7 +282,7 @@
             // 
             this.Btn_512.Location = new System.Drawing.Point(1077, 444);
             this.Btn_512.Name = "Btn_512";
-            this.Btn_512.Size = new System.Drawing.Size(34, 58);
+            this.Btn_512.Size = new System.Drawing.Size(34, 29);
             this.Btn_512.TabIndex = 20;
             this.Btn_512.UseVisualStyleBackColor = true;
             // 
@@ -308,9 +312,9 @@
             // 
             // Btn_79
             // 
-            this.Btn_79.Location = new System.Drawing.Point(771, 332);
+            this.Btn_79.Location = new System.Drawing.Point(771, 343);
             this.Btn_79.Name = "Btn_79";
-            this.Btn_79.Size = new System.Drawing.Size(62, 37);
+            this.Btn_79.Size = new System.Drawing.Size(62, 26);
             this.Btn_79.TabIndex = 24;
             this.Btn_79.UseVisualStyleBackColor = true;
             // 
@@ -334,7 +338,7 @@
             // 
             this.Btn_915.Location = new System.Drawing.Point(764, 432);
             this.Btn_915.Name = "Btn_915";
-            this.Btn_915.Size = new System.Drawing.Size(27, 67);
+            this.Btn_915.Size = new System.Drawing.Size(27, 29);
             this.Btn_915.TabIndex = 28;
             this.Btn_915.UseVisualStyleBackColor = true;
             // 
@@ -374,7 +378,7 @@
             // 
             this.Btn_1118.Location = new System.Drawing.Point(882, 543);
             this.Btn_1118.Name = "Btn_1118";
-            this.Btn_1118.Size = new System.Drawing.Size(55, 59);
+            this.Btn_1118.Size = new System.Drawing.Size(55, 29);
             this.Btn_1118.TabIndex = 33;
             this.Btn_1118.UseVisualStyleBackColor = true;
             // 
@@ -382,7 +386,7 @@
             // 
             this.Btn_1119.Location = new System.Drawing.Point(1007, 566);
             this.Btn_1119.Name = "Btn_1119";
-            this.Btn_1119.Size = new System.Drawing.Size(51, 66);
+            this.Btn_1119.Size = new System.Drawing.Size(51, 29);
             this.Btn_1119.TabIndex = 34;
             this.Btn_1119.UseVisualStyleBackColor = true;
             // 
@@ -390,7 +394,7 @@
             // 
             this.Btn_1219.Location = new System.Drawing.Point(1100, 543);
             this.Btn_1219.Name = "Btn_1219";
-            this.Btn_1219.Size = new System.Drawing.Size(32, 124);
+            this.Btn_1219.Size = new System.Drawing.Size(32, 29);
             this.Btn_1219.TabIndex = 35;
             this.Btn_1219.UseVisualStyleBackColor = true;
             // 
@@ -398,7 +402,7 @@
             // 
             this.Btn_1314.Location = new System.Drawing.Point(653, 249);
             this.Btn_1314.Name = "Btn_1314";
-            this.Btn_1314.Size = new System.Drawing.Size(36, 69);
+            this.Btn_1314.Size = new System.Drawing.Size(36, 29);
             this.Btn_1314.TabIndex = 36;
             this.Btn_1314.UseVisualStyleBackColor = true;
             // 
@@ -406,7 +410,7 @@
             // 
             this.Btn_1317.Location = new System.Drawing.Point(580, 116);
             this.Btn_1317.Name = "Btn_1317";
-            this.Btn_1317.Size = new System.Drawing.Size(91, 57);
+            this.Btn_1317.Size = new System.Drawing.Size(91, 29);
             this.Btn_1317.TabIndex = 37;
             this.Btn_1317.UseVisualStyleBackColor = true;
             // 
@@ -414,7 +418,7 @@
             // 
             this.Btn_1416.Location = new System.Drawing.Point(653, 356);
             this.Btn_1416.Name = "Btn_1416";
-            this.Btn_1416.Size = new System.Drawing.Size(36, 38);
+            this.Btn_1416.Size = new System.Drawing.Size(36, 29);
             this.Btn_1416.TabIndex = 38;
             this.Btn_1416.UseVisualStyleBackColor = true;
             // 
@@ -422,7 +426,7 @@
             // 
             this.Btn_1420.Location = new System.Drawing.Point(502, 265);
             this.Btn_1420.Name = "Btn_1420";
-            this.Btn_1420.Size = new System.Drawing.Size(79, 53);
+            this.Btn_1420.Size = new System.Drawing.Size(79, 29);
             this.Btn_1420.TabIndex = 39;
             this.Btn_1420.UseVisualStyleBackColor = true;
             // 
@@ -430,7 +434,7 @@
             // 
             this.Btn_1320.Location = new System.Drawing.Point(451, 201);
             this.Btn_1320.Name = "Btn_1320";
-            this.Btn_1320.Size = new System.Drawing.Size(167, 32);
+            this.Btn_1320.Size = new System.Drawing.Size(167, 29);
             this.Btn_1320.TabIndex = 40;
             this.Btn_1320.UseVisualStyleBackColor = true;
             // 
@@ -454,7 +458,7 @@
             // 
             this.Btn_1523.Location = new System.Drawing.Point(705, 543);
             this.Btn_1523.Name = "Btn_1523";
-            this.Btn_1523.Size = new System.Drawing.Size(43, 59);
+            this.Btn_1523.Size = new System.Drawing.Size(43, 29);
             this.Btn_1523.TabIndex = 43;
             this.Btn_1523.UseVisualStyleBackColor = true;
             // 
@@ -462,7 +466,7 @@
             // 
             this.Btn_1518.Location = new System.Drawing.Point(771, 553);
             this.Btn_1518.Name = "Btn_1518";
-            this.Btn_1518.Size = new System.Drawing.Size(50, 79);
+            this.Btn_1518.Size = new System.Drawing.Size(50, 29);
             this.Btn_1518.TabIndex = 44;
             this.Btn_1518.UseVisualStyleBackColor = true;
             // 
@@ -470,7 +474,7 @@
             // 
             this.Btn_1622.Location = new System.Drawing.Point(653, 424);
             this.Btn_1622.Name = "Btn_1622";
-            this.Btn_1622.Size = new System.Drawing.Size(36, 70);
+            this.Btn_1622.Size = new System.Drawing.Size(36, 29);
             this.Btn_1622.TabIndex = 45;
             this.Btn_1622.UseVisualStyleBackColor = true;
             // 
@@ -478,7 +482,7 @@
             // 
             this.Btn_1621.Location = new System.Drawing.Point(524, 423);
             this.Btn_1621.Name = "Btn_1621";
-            this.Btn_1621.Size = new System.Drawing.Size(109, 38);
+            this.Btn_1621.Size = new System.Drawing.Size(109, 29);
             this.Btn_1621.TabIndex = 46;
             this.Btn_1621.UseVisualStyleBackColor = true;
             // 
@@ -486,7 +490,7 @@
             // 
             this.Btn_1720.Location = new System.Drawing.Point(451, 113);
             this.Btn_1720.Name = "Btn_1720";
-            this.Btn_1720.Size = new System.Drawing.Size(59, 55);
+            this.Btn_1720.Size = new System.Drawing.Size(59, 29);
             this.Btn_1720.TabIndex = 47;
             this.Btn_1720.UseVisualStyleBackColor = true;
             // 
@@ -518,7 +522,7 @@
             // 
             this.Btn_2026.Location = new System.Drawing.Point(302, 280);
             this.Btn_2026.Name = "Btn_2026";
-            this.Btn_2026.Size = new System.Drawing.Size(66, 54);
+            this.Btn_2026.Size = new System.Drawing.Size(66, 29);
             this.Btn_2026.TabIndex = 51;
             this.Btn_2026.UseVisualStyleBackColor = true;
             // 
@@ -526,7 +530,7 @@
             // 
             this.Btn_2021.Location = new System.Drawing.Point(403, 265);
             this.Btn_2021.Name = "Btn_2021";
-            this.Btn_2021.Size = new System.Drawing.Size(41, 99);
+            this.Btn_2021.Size = new System.Drawing.Size(41, 29);
             this.Btn_2021.TabIndex = 52;
             this.Btn_2021.UseVisualStyleBackColor = true;
             // 
@@ -542,7 +546,7 @@
             // 
             this.Btn_2024.Location = new System.Drawing.Point(315, 113);
             this.Btn_2024.Name = "Btn_2024";
-            this.Btn_2024.Size = new System.Drawing.Size(51, 55);
+            this.Btn_2024.Size = new System.Drawing.Size(51, 29);
             this.Btn_2024.TabIndex = 54;
             this.Btn_2024.UseVisualStyleBackColor = true;
             // 
@@ -558,7 +562,7 @@
             // 
             this.Btn_2128.Location = new System.Drawing.Point(435, 456);
             this.Btn_2128.Name = "Btn_2128";
-            this.Btn_2128.Size = new System.Drawing.Size(36, 64);
+            this.Btn_2128.Size = new System.Drawing.Size(36, 29);
             this.Btn_2128.TabIndex = 56;
             this.Btn_2128.UseVisualStyleBackColor = true;
             // 
@@ -566,7 +570,7 @@
             // 
             this.Btn_2126.Location = new System.Drawing.Point(325, 375);
             this.Btn_2126.Name = "Btn_2126";
-            this.Btn_2126.Size = new System.Drawing.Size(94, 45);
+            this.Btn_2126.Size = new System.Drawing.Size(94, 29);
             this.Btn_2126.TabIndex = 57;
             this.Btn_2126.UseVisualStyleBackColor = true;
             // 
@@ -582,7 +586,7 @@
             // 
             this.Btn_2129.Location = new System.Drawing.Point(325, 474);
             this.Btn_2129.Name = "Btn_2129";
-            this.Btn_2129.Size = new System.Drawing.Size(41, 73);
+            this.Btn_2129.Size = new System.Drawing.Size(41, 29);
             this.Btn_2129.TabIndex = 59;
             this.Btn_2129.UseVisualStyleBackColor = true;
             // 
@@ -590,7 +594,7 @@
             // 
             this.Btn_2223.Location = new System.Drawing.Point(653, 535);
             this.Btn_2223.Name = "Btn_2223";
-            this.Btn_2223.Size = new System.Drawing.Size(29, 85);
+            this.Btn_2223.Size = new System.Drawing.Size(29, 29);
             this.Btn_2223.TabIndex = 60;
             this.Btn_2223.UseVisualStyleBackColor = true;
             // 
@@ -614,7 +618,7 @@
             // 
             this.Btn_2325.Location = new System.Drawing.Point(680, 638);
             this.Btn_2325.Name = "Btn_2325";
-            this.Btn_2325.Size = new System.Drawing.Size(39, 52);
+            this.Btn_2325.Size = new System.Drawing.Size(39, 29);
             this.Btn_2325.TabIndex = 63;
             this.Btn_2325.UseVisualStyleBackColor = true;
             // 
@@ -646,7 +650,7 @@
             // 
             this.Btn_2632.Location = new System.Drawing.Point(244, 426);
             this.Btn_2632.Name = "Btn_2632";
-            this.Btn_2632.Size = new System.Drawing.Size(59, 76);
+            this.Btn_2632.Size = new System.Drawing.Size(59, 29);
             this.Btn_2632.TabIndex = 67;
             this.Btn_2632.UseVisualStyleBackColor = true;
             // 
@@ -654,7 +658,7 @@
             // 
             this.Btn_2633.Location = new System.Drawing.Point(105, 403);
             this.Btn_2633.Name = "Btn_2633";
-            this.Btn_2633.Size = new System.Drawing.Size(111, 41);
+            this.Btn_2633.Size = new System.Drawing.Size(111, 29);
             this.Btn_2633.TabIndex = 68;
             this.Btn_2633.UseVisualStyleBackColor = true;
             // 
@@ -662,7 +666,7 @@
             // 
             this.Btn_2634.Location = new System.Drawing.Point(167, 242);
             this.Btn_2634.Name = "Btn_2634";
-            this.Btn_2634.Size = new System.Drawing.Size(69, 61);
+            this.Btn_2634.Size = new System.Drawing.Size(69, 29);
             this.Btn_2634.TabIndex = 69;
             this.Btn_2634.UseVisualStyleBackColor = true;
             // 
@@ -686,7 +690,7 @@
             // 
             this.Btn_2830.Location = new System.Drawing.Point(424, 572);
             this.Btn_2830.Name = "Btn_2830";
-            this.Btn_2830.Size = new System.Drawing.Size(36, 66);
+            this.Btn_2830.Size = new System.Drawing.Size(36, 29);
             this.Btn_2830.TabIndex = 72;
             this.Btn_2830.UseVisualStyleBackColor = true;
             // 
@@ -726,7 +730,7 @@
             // 
             this.Btn_3235.Location = new System.Drawing.Point(132, 528);
             this.Btn_3235.Name = "Btn_3235";
-            this.Btn_3235.Size = new System.Drawing.Size(60, 41);
+            this.Btn_3235.Size = new System.Drawing.Size(60, 29);
             this.Btn_3235.TabIndex = 77;
             this.Btn_3235.UseVisualStyleBackColor = true;
             // 
@@ -734,15 +738,15 @@
             // 
             this.Btn_3335.Location = new System.Drawing.Point(46, 508);
             this.Btn_3335.Name = "Btn_3335";
-            this.Btn_3335.Size = new System.Drawing.Size(45, 74);
+            this.Btn_3335.Size = new System.Drawing.Size(45, 29);
             this.Btn_3335.TabIndex = 78;
             this.Btn_3335.UseVisualStyleBackColor = true;
             // 
             // Btn_3334
             // 
-            this.Btn_3334.Location = new System.Drawing.Point(23, 245);
+            this.Btn_3334.Location = new System.Drawing.Point(23, 321);
             this.Btn_3334.Name = "Btn_3334";
-            this.Btn_3334.Size = new System.Drawing.Size(35, 181);
+            this.Btn_3334.Size = new System.Drawing.Size(48, 29);
             this.Btn_3334.TabIndex = 79;
             this.Btn_3334.UseVisualStyleBackColor = true;
             // 
@@ -786,14 +790,31 @@
             this.Dgv_TicketList.AllowUserToDeleteRows = false;
             this.Dgv_TicketList.AllowUserToResizeColumns = false;
             this.Dgv_TicketList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_TicketList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_TicketList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_TicketList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Dgv_TicketList.EnableHeadersVisualStyles = false;
             this.Dgv_TicketList.Location = new System.Drawing.Point(1256, 125);
             this.Dgv_TicketList.Name = "Dgv_TicketList";
             this.Dgv_TicketList.ReadOnly = true;
             this.Dgv_TicketList.RowHeadersVisible = false;
             this.Dgv_TicketList.RowHeadersWidth = 51;
-            this.Dgv_TicketList.RowTemplate.Height = 29;
-            this.Dgv_TicketList.Size = new System.Drawing.Size(271, 201);
+            this.Dgv_TicketList.RowTemplate.Height = 38;
+            this.Dgv_TicketList.Size = new System.Drawing.Size(333, 201);
             this.Dgv_TicketList.TabIndex = 83;
             this.Dgv_TicketList.TabStop = false;
             this.Dgv_TicketList.Visible = false;
@@ -801,8 +822,8 @@
             // TLP_LabelGroup
             // 
             this.TLP_LabelGroup.ColumnCount = 2;
-            this.TLP_LabelGroup.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.92538F));
-            this.TLP_LabelGroup.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.07463F));
+            this.TLP_LabelGroup.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.13293F));
+            this.TLP_LabelGroup.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.86707F));
             this.TLP_LabelGroup.Controls.Add(this.PtsHeader, 0, 0);
             this.TLP_LabelGroup.Controls.Add(this.Lbl_RemainingCarts, 1, 0);
             this.TLP_LabelGroup.Controls.Add(this.ScoreLabel, 0, 1);
@@ -816,91 +837,100 @@
             this.TLP_LabelGroup.RowCount = 5;
             this.TLP_LabelGroup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLP_LabelGroup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.TLP_LabelGroup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.TLP_LabelGroup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.TLP_LabelGroup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TLP_LabelGroup.Size = new System.Drawing.Size(268, 196);
+            this.TLP_LabelGroup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.TLP_LabelGroup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.TLP_LabelGroup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.TLP_LabelGroup.Size = new System.Drawing.Size(331, 196);
             this.TLP_LabelGroup.TabIndex = 84;
             this.TLP_LabelGroup.Visible = false;
             // 
             // PtsHeader
             // 
             this.PtsHeader.AutoSize = true;
+            this.PtsHeader.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PtsHeader.Location = new System.Drawing.Point(3, 0);
             this.PtsHeader.Name = "PtsHeader";
-            this.PtsHeader.Size = new System.Drawing.Size(145, 20);
+            this.PtsHeader.Size = new System.Drawing.Size(230, 32);
             this.PtsHeader.TabIndex = 0;
             this.PtsHeader.Text = "Pozostało wagonów:";
             // 
             // Lbl_RemainingCarts
             // 
             this.Lbl_RemainingCarts.AutoSize = true;
-            this.Lbl_RemainingCarts.Location = new System.Drawing.Point(177, 0);
+            this.Lbl_RemainingCarts.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Lbl_RemainingCarts.Location = new System.Drawing.Point(254, 0);
             this.Lbl_RemainingCarts.Name = "Lbl_RemainingCarts";
-            this.Lbl_RemainingCarts.Size = new System.Drawing.Size(25, 20);
+            this.Lbl_RemainingCarts.Size = new System.Drawing.Size(40, 32);
             this.Lbl_RemainingCarts.TabIndex = 1;
             this.Lbl_RemainingCarts.Text = "45";
             // 
             // ScoreLabel
             // 
             this.ScoreLabel.AutoSize = true;
+            this.ScoreLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ScoreLabel.Location = new System.Drawing.Point(3, 37);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(84, 20);
+            this.ScoreLabel.Size = new System.Drawing.Size(136, 32);
             this.ScoreLabel.TabIndex = 2;
             this.ScoreLabel.Text = "Twój wynik:";
             // 
             // Lbl_Score
             // 
             this.Lbl_Score.AutoSize = true;
-            this.Lbl_Score.Location = new System.Drawing.Point(177, 37);
+            this.Lbl_Score.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Lbl_Score.Location = new System.Drawing.Point(254, 37);
             this.Lbl_Score.Name = "Lbl_Score";
-            this.Lbl_Score.Size = new System.Drawing.Size(17, 20);
+            this.Lbl_Score.Size = new System.Drawing.Size(27, 32);
             this.Lbl_Score.TabIndex = 3;
             this.Lbl_Score.Text = "0";
             // 
             // Lbl_OpponentHeader
             // 
             this.Lbl_OpponentHeader.AutoSize = true;
-            this.Lbl_OpponentHeader.Location = new System.Drawing.Point(3, 137);
+            this.Lbl_OpponentHeader.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Lbl_OpponentHeader.Location = new System.Drawing.Point(3, 116);
             this.Lbl_OpponentHeader.Name = "Lbl_OpponentHeader";
-            this.Lbl_OpponentHeader.Size = new System.Drawing.Size(148, 20);
+            this.Lbl_OpponentHeader.Size = new System.Drawing.Size(237, 32);
             this.Lbl_OpponentHeader.TabIndex = 4;
             this.Lbl_OpponentHeader.Text = "Wagony przeciwnika:";
             // 
             // Lbl_EnemyScoreHeader
             // 
             this.Lbl_EnemyScoreHeader.AutoSize = true;
-            this.Lbl_EnemyScoreHeader.Location = new System.Drawing.Point(3, 176);
+            this.Lbl_EnemyScoreHeader.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Lbl_EnemyScoreHeader.Location = new System.Drawing.Point(3, 159);
             this.Lbl_EnemyScoreHeader.Name = "Lbl_EnemyScoreHeader";
-            this.Lbl_EnemyScoreHeader.Size = new System.Drawing.Size(134, 20);
+            this.Lbl_EnemyScoreHeader.Size = new System.Drawing.Size(216, 32);
             this.Lbl_EnemyScoreHeader.TabIndex = 5;
             this.Lbl_EnemyScoreHeader.Text = "Wynik przeciwnika:";
             // 
             // Lbl_EnemyCarts
             // 
             this.Lbl_EnemyCarts.AutoSize = true;
-            this.Lbl_EnemyCarts.Location = new System.Drawing.Point(177, 137);
+            this.Lbl_EnemyCarts.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Lbl_EnemyCarts.Location = new System.Drawing.Point(254, 116);
             this.Lbl_EnemyCarts.Name = "Lbl_EnemyCarts";
-            this.Lbl_EnemyCarts.Size = new System.Drawing.Size(17, 20);
+            this.Lbl_EnemyCarts.Size = new System.Drawing.Size(27, 32);
             this.Lbl_EnemyCarts.TabIndex = 6;
             this.Lbl_EnemyCarts.Text = "0";
             // 
             // Lbl_EnemyScore
             // 
             this.Lbl_EnemyScore.AutoSize = true;
-            this.Lbl_EnemyScore.Location = new System.Drawing.Point(177, 176);
+            this.Lbl_EnemyScore.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Lbl_EnemyScore.Location = new System.Drawing.Point(254, 159);
             this.Lbl_EnemyScore.Name = "Lbl_EnemyScore";
-            this.Lbl_EnemyScore.Size = new System.Drawing.Size(17, 20);
+            this.Lbl_EnemyScore.Size = new System.Drawing.Size(27, 32);
             this.Lbl_EnemyScore.TabIndex = 7;
             this.Lbl_EnemyScore.Text = "0";
             // 
             // Btn_DrawTicket
             // 
             this.Btn_DrawTicket.Enabled = false;
-            this.Btn_DrawTicket.Location = new System.Drawing.Point(1380, 586);
+            this.Btn_DrawTicket.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn_DrawTicket.Location = new System.Drawing.Point(1261, 572);
             this.Btn_DrawTicket.Name = "Btn_DrawTicket";
-            this.Btn_DrawTicket.Size = new System.Drawing.Size(146, 59);
+            this.Btn_DrawTicket.Size = new System.Drawing.Size(328, 76);
             this.Btn_DrawTicket.TabIndex = 85;
             this.Btn_DrawTicket.Text = "Losuj nowe połączenie";
             this.Btn_DrawTicket.UseVisualStyleBackColor = true;
@@ -910,7 +940,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1557, 756);
+            this.ClientSize = new System.Drawing.Size(1601, 756);
             this.Controls.Add(this.Btn_DrawTicket);
             this.Controls.Add(this.TLP_LabelGroup);
             this.Controls.Add(this.Dgv_TicketList);

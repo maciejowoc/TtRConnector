@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CityList = new System.Windows.Forms.ComboBox();
             this.Btn_ReturnToMenu = new System.Windows.Forms.Button();
             this.ResultsTable = new System.Windows.Forms.DataGridView();
@@ -40,19 +42,21 @@
             // 
             // CityList
             // 
+            this.CityList.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CityList.FormattingEnabled = true;
-            this.CityList.Location = new System.Drawing.Point(48, 38);
+            this.CityList.Location = new System.Drawing.Point(43, 38);
             this.CityList.Name = "CityList";
-            this.CityList.Size = new System.Drawing.Size(151, 28);
+            this.CityList.Size = new System.Drawing.Size(205, 39);
             this.CityList.TabIndex = 0;
             this.CityList.Text = "-Wybierz miasto-";
             this.CityList.SelectedIndexChanged += new System.EventHandler(this.CityList_SelectedIndexChanged);
             // 
             // Btn_ReturnToMenu
             // 
-            this.Btn_ReturnToMenu.Location = new System.Drawing.Point(607, 363);
+            this.Btn_ReturnToMenu.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn_ReturnToMenu.Location = new System.Drawing.Point(547, 363);
             this.Btn_ReturnToMenu.Name = "Btn_ReturnToMenu";
-            this.Btn_ReturnToMenu.Size = new System.Drawing.Size(150, 54);
+            this.Btn_ReturnToMenu.Size = new System.Drawing.Size(210, 54);
             this.Btn_ReturnToMenu.TabIndex = 1;
             this.Btn_ReturnToMenu.Text = "Powrót do menu";
             this.Btn_ReturnToMenu.UseVisualStyleBackColor = true;
@@ -65,22 +69,40 @@
             this.ResultsTable.AllowUserToResizeColumns = false;
             this.ResultsTable.AllowUserToResizeRows = false;
             this.ResultsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ResultsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ResultsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ResultsTable.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ResultsTable.EnableHeadersVisualStyles = false;
             this.ResultsTable.Location = new System.Drawing.Point(306, 38);
             this.ResultsTable.MultiSelect = false;
             this.ResultsTable.Name = "ResultsTable";
             this.ResultsTable.ReadOnly = true;
             this.ResultsTable.RowHeadersVisible = false;
             this.ResultsTable.RowHeadersWidth = 51;
-            this.ResultsTable.RowTemplate.Height = 29;
+            this.ResultsTable.RowTemplate.Height = 38;
             this.ResultsTable.Size = new System.Drawing.Size(451, 261);
             this.ResultsTable.TabIndex = 3;
             // 
             // Btn_CheckNeighbours
             // 
-            this.Btn_CheckNeighbours.Location = new System.Drawing.Point(48, 151);
+            this.Btn_CheckNeighbours.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn_CheckNeighbours.Location = new System.Drawing.Point(43, 390);
             this.Btn_CheckNeighbours.Name = "Btn_CheckNeighbours";
-            this.Btn_CheckNeighbours.Size = new System.Drawing.Size(156, 42);
+            this.Btn_CheckNeighbours.Size = new System.Drawing.Size(205, 48);
             this.Btn_CheckNeighbours.TabIndex = 4;
             this.Btn_CheckNeighbours.Text = "Sprawdź sąsiadów";
             this.Btn_CheckNeighbours.UseVisualStyleBackColor = true;
@@ -88,20 +110,23 @@
             // 
             // Btn_DrawTicket
             // 
-            this.Btn_DrawTicket.Location = new System.Drawing.Point(48, 247);
+            this.Btn_DrawTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Btn_DrawTicket.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn_DrawTicket.Location = new System.Drawing.Point(43, 127);
             this.Btn_DrawTicket.Name = "Btn_DrawTicket";
-            this.Btn_DrawTicket.Size = new System.Drawing.Size(156, 41);
+            this.Btn_DrawTicket.Size = new System.Drawing.Size(205, 50);
             this.Btn_DrawTicket.TabIndex = 5;
             this.Btn_DrawTicket.Text = "Losuj połączenie";
-            this.Btn_DrawTicket.UseVisualStyleBackColor = true;
+            this.Btn_DrawTicket.UseVisualStyleBackColor = false;
             this.Btn_DrawTicket.Click += new System.EventHandler(this.Btn_DrawTicket_Click);
             // 
             // chkbx_DrawFromList
             // 
             this.chkbx_DrawFromList.AutoSize = true;
-            this.chkbx_DrawFromList.Location = new System.Drawing.Point(48, 294);
+            this.chkbx_DrawFromList.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.chkbx_DrawFromList.Location = new System.Drawing.Point(43, 183);
             this.chkbx_DrawFromList.Name = "chkbx_DrawFromList";
-            this.chkbx_DrawFromList.Size = new System.Drawing.Size(168, 24);
+            this.chkbx_DrawFromList.Size = new System.Drawing.Size(214, 32);
             this.chkbx_DrawFromList.TabIndex = 6;
             this.chkbx_DrawFromList.Text = "Wybierz stację z listy";
             this.chkbx_DrawFromList.UseVisualStyleBackColor = true;
@@ -109,9 +134,10 @@
             // Btn_ShowShortestPath
             // 
             this.Btn_ShowShortestPath.Enabled = false;
-            this.Btn_ShowShortestPath.Location = new System.Drawing.Point(48, 351);
+            this.Btn_ShowShortestPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn_ShowShortestPath.Location = new System.Drawing.Point(43, 324);
             this.Btn_ShowShortestPath.Name = "Btn_ShowShortestPath";
-            this.Btn_ShowShortestPath.Size = new System.Drawing.Size(151, 35);
+            this.Btn_ShowShortestPath.Size = new System.Drawing.Size(205, 50);
             this.Btn_ShowShortestPath.TabIndex = 7;
             this.Btn_ShowShortestPath.Text = "Pokaż trasę";
             this.Btn_ShowShortestPath.UseVisualStyleBackColor = true;

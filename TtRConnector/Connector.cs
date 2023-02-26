@@ -102,16 +102,14 @@ namespace TtRConnector
                 int tableIndex = 0;
                 int targetId;                 //Pomocnicza zmienna pobierająca id miasta celu
                 int id = graph.Load(CityList.Text);
-                for (int j = 0; j < graph.Vertices.Count ; j++)
+                Vertex city = graph.Vertices[id];
+                foreach (int j in city.connections)
                 {
-                    if (graph.CheckEdge(id, j))
-                    {
-                        ResultsTable.Rows.Add();
-                        ResultsTable.Rows[tableIndex].Cells[0].Value = (graph.Vertices[id].name + " - " + graph.Vertices[j].name);
-                        targetId = graph.Vertices[id].connections.IndexOf(graph.Vertices[j].id);
-                        ResultsTable.Rows[tableIndex].Cells[1].Value = (graph.Vertices[id].distances[targetId]);
-                        tableIndex++;
-                    }
+                    ResultsTable.Rows.Add();
+                    ResultsTable.Rows[tableIndex].Cells[0].Value = (graph.Vertices[id].name + " - " + graph.Vertices[j].name);
+                    targetId = graph.Vertices[id].connections.IndexOf(graph.Vertices[j].id);
+                    ResultsTable.Rows[tableIndex].Cells[1].Value = (graph.Vertices[id].distances[targetId]);
+                    tableIndex++;
                 }
             }
         }
@@ -126,7 +124,7 @@ namespace TtRConnector
             Random rnd = new();
             bool condition = false;               //Warunek sprawdzający czy wylosowane miasto jako meta nie koliduje z warunkami wyszukiwania
             int start;
-            int meta;
+            int finish;
             List<string> etapy;
             if (chkbx_DrawFromList.Checked == true)           //Jeśli zaznaczono startową stację to pobiera jej id z listy
             {
@@ -142,14 +140,14 @@ namespace TtRConnector
             SetTable();
             while (condition != true)
             {
-                meta = rnd.Next(graph.Vertices.Count);
-                if (!graph.Vertices[start].CheckConnection(meta) && start != meta)
+                finish = rnd.Next(graph.Vertices.Count);
+                if (!graph.Vertices[start].CheckConnection(finish) && start != finish)
                 {
                     //Wypisanie nazw miasta wylosowanego połączenia
                     ResultsTable.Rows.Add();
-                    ResultsTable.Rows[0].Cells[0].Value = (graph.Vertices[start].name + " - " + graph.Vertices[meta].name);
+                    ResultsTable.Rows[0].Cells[0].Value = (graph.Vertices[start].name + " - " + graph.Vertices[finish].name);
                     //Wywołanie metody wyszukiwania drogi i jej wypisanie
-                    etapy = graph.Droga(start, meta, 0);
+                    etapy = graph.Droga(start, finish, 0);
                     resultsList = etapy;
                     ResultsTable.Rows[0].Cells[1].Value = (graph.len.ToString());
                     condition = true;

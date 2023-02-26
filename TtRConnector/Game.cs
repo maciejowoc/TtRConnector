@@ -179,8 +179,6 @@ namespace TtRConnector
                     var moveResults = opponent.MakeMove();
                     Lbl_EnemyCarts.Text = Convert.ToString(moveResults.Item2);
                     Lbl_EnemyScore.Text = Convert.ToString(moveResults.Item1);
-                    //Lbl_OpponentHeader.Text = Convert.ToString(map.Vertices[opponent.start].name);
-                    //Lbl_EnemyScoreHeader.Text = Convert.ToString(map.Vertices[opponent.end].name);
                     DisableButton(moveResults.Item3, moveResults.Item4, 2);
                     if (moveResults.Item5 == true) EndGame();
                 }
@@ -297,13 +295,12 @@ namespace TtRConnector
             SetTable();
             Random r = new Random();
             int beginer = 0;
-            beginer = r.Next(0, 9);
+            beginer = r.Next(0, 10);
             if (beginer > 5)
             {
                 var moveResults = opponent.MakeMove();
                 Lbl_EnemyCarts.Text = Convert.ToString(moveResults.Item2);
-                Lbl_EnemyScore.Text = Convert.ToString(moveResults.Item1);
-                Lbl_OpponentHeader.Text = Convert.ToString(beginer);
+                Lbl_EnemyScore.Text = Convert.ToString(moveResults.Item1); 
                 DisableButton(moveResults.Item3, moveResults.Item4, 2);
                 if (moveResults.Item5 == true) EndGame();
             }
@@ -313,7 +310,8 @@ namespace TtRConnector
 
         private void Btn_DrawTicket_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Wylosować nową trasę?\n\nSpowoduje to odjęcie punktów za wymieniane zlecenie.", "Zmienić trasę?", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Wylosować nową trasę?\n\nSpowoduje to odjęcie punktów za wymieniane zlecenie.", 
+                "Zmienić trasę?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No) return;
             int rowsCount = Dgv_TicketList.RowCount - 1;
             score -= Convert.ToInt32(Dgv_TicketList.Rows[rowsCount].Cells[1].Value);

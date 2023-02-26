@@ -90,10 +90,10 @@ namespace TtRConnector
             return min;
         }
 
-        static Data[] Dijkstra(int[,] matrix, int start)                   //Realizacja algorytmu Dijkstry
+        static Data[] Dijkstra(int[,] matrix, int start)                   
         {
             Data[] tab = new Data[matrix.GetLength(0)];
-            for (int i = 0; i < matrix.GetLength(0); i++)                   //  Przygotowanie grafu do wyszukiwania
+            for (int i = 0; i < matrix.GetLength(0); i++)                   
             {
                 tab[i].distance = (i == start) ? 0 : int.MaxValue;
                 tab[i].visited = false;
@@ -125,8 +125,6 @@ namespace TtRConnector
                 tab[i].visited = false;
                 tab[i].previous = -1;
             }
-
-
             Vertex v = vertices[start];
             do
             {
@@ -184,7 +182,7 @@ namespace TtRConnector
             return false;
         }
 
-        void WypiszDane(int meta, Data[] d)             //Wypisuje dane z otrzymanej tablicy wynikowej
+        void GetCities(int meta, Data[] d)             //Wypisuje dane z otrzymanej tablicy wynikowej
         {
             int u = meta;
             List<int> visited = new();
@@ -233,7 +231,7 @@ namespace TtRConnector
             {
                 table = Dijkstra(neighbours, start, owner, Vertices);
             }
-            WypiszDane(meta, table);
+            GetCities(meta, table);
             return cities;
         }
 
@@ -272,7 +270,7 @@ namespace TtRConnector
             {
                 table = Dijkstra(neighbours, start, owner, Vertices);
             }
-            WypiszDane(meta, table);
+            GetCities(meta, table);
             return cities;
         }
 
