@@ -98,17 +98,36 @@ namespace TtRConnector
         }
 
         /* Method disabling proper button */
-        protected void DisableButton(int x, int y)
+        protected void DisableButton(int x, int y, int owner)
         {
             string btnName = "Btn_" + x + y;
             if (Controls.Find(btnName,true).FirstOrDefault() == null) btnName = "Btn_" + y + x;
             Controls[btnName].Enabled = false;
-            Controls[btnName].BackColor = Color.FromArgb(255, 175, 175);
+            if(owner == 1)
+            {
+                Controls[btnName].BackColor = Color.FromArgb(175, 255, 175);
+            }
+            else
+            {
+                Controls[btnName].BackColor = Color.FromArgb(255, 175, 175);
+            }
+            
         }
 
         protected void EndGame()
         {
-            MessageBox.Show("Twój wynik: " + Lbl_Score.Text, "Koniec gry!");
+            if(score > opponent.opponentScore)
+            {
+                MessageBox.Show("Zwycięstwo!\n\nTwój wynik: " + Lbl_Score.Text, "Koniec gry!");
+            }
+            else if(score < opponent.opponentScore)
+            {
+                MessageBox.Show("Porażka!\n\nTwój wynik: " + Lbl_Score.Text, "Koniec gry!");
+            }
+            else
+            {
+                MessageBox.Show("Remis!\n\nTwój wynik: " + Lbl_Score.Text, "Koniec gry!");
+            }
             activeGame = false;
             SetButtons(false);
             Btn_DrawTicket.Enabled = false;
@@ -117,7 +136,7 @@ namespace TtRConnector
 
         /* Method that claims connection */
 
-        void ClaimConnection(int x, int y, int owner, object sender)
+        public void ClaimConnection(int x, int y, int owner)
         {
             int cost = map.Vertices[x].distances[map.Vertices[x].connections.IndexOf(y)];
             if (carts >= cost)
@@ -126,9 +145,9 @@ namespace TtRConnector
                 map.Vertices[y].owner[map.Vertices[y].connections.IndexOf(x)] = owner;
                 carts -= cost;
                 Lbl_RemainingCarts.Text = Convert.ToString(carts);
-                (sender as Button).Enabled = false;
-                (sender as Button).BackColor = Color.FromArgb(175, 255, 175);
-                switch (cost){
+                DisableButton(x, y, owner);
+                switch (cost)
+                {
                     case 1:
                         score++;
                         break;
@@ -147,23 +166,21 @@ namespace TtRConnector
                     case 6:
                         score += 15;
                         break;
-
                 }
+                
                 Lbl_Score.Text = Convert.ToString(score);
                 CheckRealisation(start,meta,owner);
                 if (carts < 4)
                 {
                     EndGame();
                 }
-                if (activeGame)
+                if (owner == 1 && activeGame)
                 {
                     var moveResults = opponent.MakeMove();
                     Lbl_EnemyCarts.Text = Convert.ToString(moveResults.Item2);
                     Lbl_EnemyScore.Text = Convert.ToString(moveResults.Item1);
-                    Lbl_OpponentHeader.Text = Convert.ToString(map.Vertices[opponent.start].name);
-                    Lbl_EnemyScoreHeader.Text = Convert.ToString(map.Vertices[opponent.end].name);
-                    DisableButton(moveResults.Item3, moveResults.Item4);
-                    if(moveResults.Item5 == true) EndGame();
+                    DisableButton(moveResults.Item3, moveResults.Item4, 2);
+                    if (moveResults.Item5 == true) EndGame();
                 }
             }
             else MessageBox.Show("Nie masz wystarczającej liczby wagonów!","Nie stać Cię!");         
@@ -183,7 +200,7 @@ namespace TtRConnector
                     string data = btn.Name[(btn.Name.IndexOf("_") + 1)..];
                     int x = Convert.ToInt32(data[..(data.Length / 2)]);
                     int y = Convert.ToInt32(data[(data.Length / 2)..]);
-                    btn.Click += (sender, e) => ClaimConnection(x, y, 1, sender);
+                    btn.Click += (sender, e) => ClaimConnection(x, y, 1);
                 }               
             }
         }
@@ -253,10 +270,10 @@ namespace TtRConnector
             }
             carts = 45;
             score = 0;
+            map.Clear();
             if(!activeGame) InsertMethods();
             activeGame = true;
             SetButtons(true);
-            //_______________________________DO SPRAWDZENIA___________________-
             if(opponent == null)
             {
                 opponent = new Opponent(2, ref map);
@@ -276,13 +293,25 @@ namespace TtRConnector
             Lbl_RemainingCarts.Text = Convert.ToString(carts);
             Lbl_Score.Text = Convert.ToString(score);
             SetTable();
+            Random r = new Random();
+            int beginer = 0;
+            beginer = r.Next(0, 10);
+            if (beginer > 5)
+            {
+                var moveResults = opponent.MakeMove();
+                Lbl_EnemyCarts.Text = Convert.ToString(moveResults.Item2);
+                Lbl_EnemyScore.Text = Convert.ToString(moveResults.Item1); 
+                DisableButton(moveResults.Item3, moveResults.Item4, 2);
+                if (moveResults.Item5 == true) EndGame();
+            }
             DrawTicket(1);
             Btn_DrawTicket.Enabled = true;
         }
 
         private void Btn_DrawTicket_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Wylosować nową trasę?\n\nSpowoduje to odjęcie punktów za wymieniane zlecenie.", "Zmienić trasę?", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Wylosować nową trasę?\n\nSpowoduje to odjęcie punktów za wymieniane zlecenie.", 
+                "Zmienić trasę?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No) return;
             int rowsCount = Dgv_TicketList.RowCount - 1;
             score -= Convert.ToInt32(Dgv_TicketList.Rows[rowsCount].Cells[1].Value);
